@@ -1,0 +1,28 @@
+<div class="container ">
+
+  <h2 class="text-center"> Add Characters </h2>
+  <hr>
+
+  <form class="form-group" (ngSubmit)="sendCharacter()">
+
+    <input
+      name="name"
+      [(ngModel)]="character.name"
+      class="form-control mb-2"
+      type="text"
+      placeholder="Type name">
+
+    <input
+      [(ngModel)]="character.power"
+      class="form-control mb-2"
+      type="number"
+      name="power"
+      placeholder="Type power">
+
+    <button type="submit" class="btn btn-outline-primary form-control mb-2">
+      Add
+    </button>
+
+  </form>
+
+</div>
