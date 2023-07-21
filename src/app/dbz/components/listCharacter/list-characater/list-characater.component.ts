@@ -11,11 +11,12 @@ export class ListCharacaterComponent {
 
   constructor( private characterService : CharacterService){};
 
-  public characters: Character[] = this.characterService.listOfCharacter;
+  public get characters(){
+    return this.characterService.listOfCharacter;
+  }
 
   public removeCharacter(id : number):void{
     this.characterService.removeCharacter(id);
-    this.characters = this.characterService.listOfCharacter;
   }
 
 }
